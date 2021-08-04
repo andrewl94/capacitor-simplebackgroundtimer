@@ -1,3 +1,7 @@
 export interface SimpleBackgroundTimerPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+
+  startInterval(options: { interval: number }): Promise<{ value: boolean }>;
+
+  stopInterval(options: Record<string, never> ): Promise<{ value: boolean }>;
+
 }
